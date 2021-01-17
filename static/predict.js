@@ -1,7 +1,7 @@
 const MODEL_URL =
-  "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/static/tfjs-models/MobileNet/tensorflowjs_model.pb";
+  "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/tfjs-models/MobileNet/tensorflowjs_model.pb";
 const WEIGHTS_URL =
-  "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/static/tfjs-models/MobileNet/weights_manifest.json";
+  "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/tfjs-models/MobileNet/weights_manifest.json";
 let model;
 let IMAGENET_CLASSES = [];
 let offset = tf.scalar(128);
