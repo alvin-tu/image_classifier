@@ -1,0 +1,14 @@
+/* .flex{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+} */
+
+body{
+    background-color: aqua;
+}
+
+.text{
+    text-align: center;
+    flex-direction: row;
+}
