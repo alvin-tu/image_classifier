@@ -1,13 +1,14 @@
 const MODEL_URL =
-  'https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/tfjs-models/MobileNet/tensorflowjs_model.pb';
+  "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/tfjs-models/MobileNet/tensorflowjs_model.pb";
 const WEIGHTS_URL =
-  'https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/tfjs-models/MobileNet/weights_manifest.json';
+  "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/tfjs-models/MobileNet/weights_manifest.json";
 let model;
 let IMAGENET_CLASSES = [];
 let offset = tf.scalar(128);
 async function loadModelAndClasses() {
   $.getJSON(
-    'https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/static/imagenet_classes.json',
+    "https://raw.githubusercontent.com/alvin-tu/sb_hacks_project/master/static/imagenet_classes.json",
+    
     function(data) {
       $.each(data, function(key, val) {
         IMAGENET_CLASSES.push(val);
@@ -19,29 +20,6 @@ async function loadModelAndClasses() {
   $("#image-selector").attr("disabled", false);
 }
 loadModelAndClasses();
-
-// const MODEL_URL =
-//   "https://raw.githubusercontent.com/shivangidas/image-classifier/master/modelv1/tensorflowjs_model.pb";
-// const WEIGHTS_URL =
-//   "https://raw.githubusercontent.com/shivangidas/image-classifier/master/modelv1/weights_manifest.json";
-// let model;
-// let IMAGENET_CLASSES = [];
-// let offset = tf.scalar(128);
-// async function loadModelAndClasses() {
-//   $.getJSON(
-//     "https://raw.githubusercontent.com/shivangidas/image-classifier/master/mobilenet/imagenet_classes.json",
-//     function(data) {
-//       $.each(data, function(key, val) {
-//         IMAGENET_CLASSES.push(val);
-//       });
-//     }
-//   );
-
-//   model = await tf.loadFrozenModel(MODEL_URL, WEIGHTS_URL);
-//   $(".loadingDiv").hide();
-//   $("#image-selector").attr("disabled", false);
-// }
-// loadModelAndClasses();
 
 document.getElementById("amazon-button").disabled = true;
 
