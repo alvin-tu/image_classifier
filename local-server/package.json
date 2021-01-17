@@ -1,0 +1,7 @@
+{
+    "name": "sb_hacks_project",
+    "version": "1.0.0",
+    "dependencies": {
+        "express": "latest"
+    }
+}
